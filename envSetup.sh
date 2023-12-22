@@ -19,7 +19,7 @@ function setup()
     fi
 
     # Alias Setup
-    local command_path="${PROJECT_PATH}envCmds.sh"
+    local command_path="${PROJECT_PATH}projCmds.sh"
     alias build="${command_path} -b"
     alias config="${command_path} -c"
     alias clean="${command_path} -d"
