@@ -165,7 +165,6 @@ int32_t main( int argc, char* argv[] )
     {
         exit(-1);
     }
-    std::cout << "post setup\n";
 
     sf::RenderWindow window( sf::VideoMode(A1::windowWidth, A1::windowHeight), "SFML works!" );
     window.setFramerateLimit( 60u );
@@ -194,7 +193,6 @@ int32_t main( int argc, char* argv[] )
 
     // let's load a font so we can display some text
     sf::Font myFont;
-    std::cout << "pre font\n";
 
     // attempt to load the font from a file
     if( !myFont.loadFromFile("FreeMono.ttf") )
@@ -203,7 +201,6 @@ int32_t main( int argc, char* argv[] )
         std::cerr << "Could not load font!\n";
         exit(-1);
     }
-    std::cout << "post font\n";
 
     // set up a character array to set the text
     char displayString[255] = "Sample Text"; // TODO: This needs to be removed
