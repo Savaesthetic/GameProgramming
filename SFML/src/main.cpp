@@ -81,6 +81,7 @@ int32_t setup( void )
     std::ifstream fin( "./config.txt" );
     if ( !fin.is_open() )
     {
+        std::cerr << "Error: Config file not found!\n";
         return -1;
     }
 
@@ -150,6 +151,7 @@ int32_t setup( void )
         else
         {
             // Could safely deal with undesired lines here but going to simple return error;
+            std::cerr << "Error: Unknown id found in config!\n";
             return -1;
         }
     }
@@ -161,7 +163,6 @@ int32_t main( int argc, char* argv[] )
 {
     if ( A1::OK != setup() )
     {
-        std::cerr << "Error: Config file not found!\n";
         exit(-1);
     }
     std::cout << "post setup\n";

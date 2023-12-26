@@ -1,2 +1,2 @@
-add_executable(example_exe main.cpp)
-target_link_libraries(example_exe PRIVATE ImGui-SFML::ImGui-SFML)
+add_executable( $ENV{PROJECT_NAME} main.cpp )
+target_link_libraries( $ENV{PROJECT_NAME} PRIVATE ImGui-SFML::ImGui-SFML )

@@ -13,6 +13,9 @@ function setup()
     if [ "$1" = "Test" ]; then
         export PROJECT_NAME="Test"
         export PROJECT_PATH=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )/${PROJECT_NAME}/
+    elif [ "$1" = "SFML" ]; then
+        export PROJECT_NAME="SFML"
+        export PROJECT_PATH=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )/${PROJECT_NAME}/
     else
         echo "Error: Invalid project supplied."
         return 2> /dev/null; exit
